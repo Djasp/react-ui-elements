@@ -1,8 +1,8 @@
 {
   "name": "@djasp/react-ui-elements",
   "version": "0.14.4",
-  "description": "Omnius React UI Elements by The Djasp",
-  "author": "Delta Fiber",
+  "description": "Omnius React UI Elements Hosted by Djasp",
+  "author": "DynaCommerce and Delta Fiber",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -130,5 +130,6 @@
   "peerDependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
