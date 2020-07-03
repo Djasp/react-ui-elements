@@ -1,0 +1,49 @@
+/* Omnius Colour Palette
+
+Name                HSL value               Hex value       */
+$light-orange:      hsl(32, 96%, 62%);      // #fba540
+$pale-red:          hsl(0, 85%, 63%);       // #f15252
+$warm-purple:       hsl(298, 58%, 40%);     // #9c2aa0
+$dark-purple:       hsl(315, 41%, 26%);     // #fba540
+$dark-grey-blue:    hsl(201, 28%, 25%);     // #2e4551
+$greeny-blue:       hsl(184, 100%, 33%);     // #45ada8
+
+$grey1:             hsl(210, 25%, 98%);     // #fafbfc;
+$grey2:             hsl(210, 5%, 92%);      // #eaebec;
+$grey3:             hsl(0, 0%, 90%);        // #e5e5e5;
+$grey4:             hsl(0, 0%, 87%);        // #dddddd;
+$grey5:             hsl(0, 0%, 84%);        // #d5d5d5;
+$grey6:             hsl(0, 0%, 82%);        // #d0d0d0;
+
+$white:             hsl(0, 0%, 100%);       // #ffffff
+$black:             hsl(0, 0%, 0%);         // #000000
+$toggleBefore:      #7FD6E3;
+$toggleAfter:       #00A7BF;
+/*
+How to use:
+
+1. The palette is first defined by a few colours which are very different from each other.
+
+2. These colours will then be assigned to variables with semantic names.
+        E.g. in shopping-bag.scss:
+            $package-bundle: $greeny-blue;
+
+3. In the actual classes use those variables and transform them with sass functions. We can do this
+   in multiple ways:
+    1. Look up the original HSL value and the HSL value of the element it needs to transform to.
+       Then go to http://jim-nielsen.com/sassme/ and enter the original value. Use the sliders to
+       transform the HSL value to the correct one.
+    2. Sometimes it better to opacify a colour instead of changing the HSL values.
+*/
+
+/* State variables */
+$error:               $pale-red;
+$primary-text-color:  $dark-grey-blue;
+$primary:             $greeny-blue;
+
+$stack1: $light-orange;
+$stack2: $pale-red;
+$stack3: $warm-purple;
+$stack4: $dark-purple;
+$stack5: $dark-grey-blue;
+$stack6: $greeny-blue;

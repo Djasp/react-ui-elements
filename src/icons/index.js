@@ -1,0 +1,11 @@
+export { default as AlertIcon } from './Alert.js';
+export { default as BannerIcon } from './BannerIcon.js';
+export { default as ChevronIcon } from './Chevron.js';
+export { default as CogwheelIcon } from './Cogwheel.js';
+export { default as DeleteIcon } from './Delete.js';
+export { default as DuplicateIcon } from './Duplicate.js';
+export { default as EmptyStateIcon } from './EmptyState.js';
+export { default as ErrorIcon } from './Error.js';
+export { default as SuccessIcon } from './Success.js';
+export { default as VerticalEllipsisIcon } from './VerticalEllipsis.js';
+export { default as WarningIcon } from './Warning.js';

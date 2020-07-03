@@ -1,0 +1,92 @@
+.vn-alert {
+  position: relative;
+  min-height: 1em;
+  margin: 1em 0;
+  padding: 1.4286em 1.4286em;
+  background: #309F8C;
+  line-height: 1.4285em;
+  color: $white;
+  -webkit-transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::selection {
+    background: rgba(46,69,82,.3);
+  }
+
+  &.warning {
+    background: #F9B44C;
+
+    > .content > p::selection {
+      color: $light-orange;
+    }
+  }
+
+  &.error {
+    background: #E74E52;
+
+    > .content > p::selection {
+      color: #E74E52;
+    }
+
+  }
+
+  > .type {
+    position: absolute;
+    top: 18px;
+  }
+
+  > .content {
+    display: inline-block;
+    margin-left: 35px;
+    width: calc(100% - 64px);
+
+    strong {
+      text-transform: uppercase;
+      margin-right: 10px;
+    }
+
+    > p::selection {
+      background: #fff;
+      color: #44aba6;
+    }
+  }
+
+  /* Icon */
+  > .icon {
+    margin-right: 0.6em;
+  }
+
+  /* Close Icon */
+  > .close.icon {
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    margin: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    opacity: .3;
+    -webkit-transition: opacity .1s ease,background .25s ease;
+    transition: opacity .1s ease,background .25s ease;
+
+    &:hover {
+      background: rgba($black,.2);
+    }
+
+    &:before {
+      content: "\D7";
+      font-size: 40px;
+      line-height: 28px;
+      color: #000;
+    }
+  }
+}

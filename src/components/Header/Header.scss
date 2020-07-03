@@ -1,0 +1,61 @@
+h1.vn-header.header {
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: $primary-text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h2.vn-header.header {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.714em;
+  font-weight: 400;
+  color: $primary-text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h3.vn-header.header {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.143em;
+  font-weight: 700;
+  color: $primary-text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h4.vn-header.header {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: $primary-text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h5.vn-header.header {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.857em;
+  font-weight: 700;
+  color: $primary;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h6.vn-header.header {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.714em;
+  font-weight: 700;
+  color: $primary-text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+}

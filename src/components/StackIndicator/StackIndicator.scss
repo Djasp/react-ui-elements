@@ -1,0 +1,35 @@
+.vn-stackIndicator {
+  .vn-stackIndicator-stack {
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+
+    > svg > circle {
+      fill: #d9d9d9
+    }
+
+    &.stack1 > svg > circle {
+      fill: $stack1
+    }
+
+    &.stack2 > svg > circle {
+      fill: $stack2
+    }
+
+    &.stack3 > svg > circle {
+      fill: $stack3
+    }
+
+    &.stack4 > svg > circle {
+      fill: $stack4
+    }
+
+    &.stack5 > svg > circle {
+      fill: $stack5
+    }
+
+    &.stack6 > svg > circle {
+      fill: $stack6
+    }
+  }
+}

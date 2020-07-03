@@ -1,0 +1,67 @@
+.vn-drawer {
+  &.ui {
+    &.sidebar {
+      &.left, &.right {
+        object-fit: contain;
+        background-color: #fafbfc;
+
+        &.visible {
+          &.left {
+            > .drawer-close-icon {
+              right: 23px
+            }
+          }
+
+          &.right {
+            > .drawer-close-icon {
+              left: 23px
+            }
+          }
+        }
+
+        & > svg {
+          cursor: pointer;
+          position: absolute;
+          object-fit: contain;
+          display: none;
+          top: 20px;
+          z-index: 999;
+
+          &.show {
+            display: block;
+          }
+        }
+
+
+        &.left {
+          box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.1), -1px 0 0 0 rgba(0, 0, 0, 0.2);
+
+          svg {
+            right: 23px
+          }
+        }
+
+        &.right {
+          box-shadow: -2px 0 2px 0 rgba(0, 0, 0, 0.1), 1px 0 0 0 rgba(0, 0, 0, 0.2);
+
+          svg {
+            left: 23px
+          }
+        }
+
+        &.wide {
+          width: 800px;
+        }
+        &.very-wide {
+          width: 1000px
+        }
+        &.thin {
+          width: 300px;
+        }
+        &.very-thin {
+          width: 150px;
+        }
+      }
+    }
+  }
+}

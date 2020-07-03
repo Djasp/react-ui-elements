@@ -1,0 +1,17 @@
+a {
+  color: #4681a0;
+  text-decoration: none;
+  padding: 2px 4px;
+
+  &:hover {
+    color: #3f7490;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: #2ea9d3;
+    border-radius: 2px;
+    background-color: rgba(33, 43, 54, 0.1);
+    outline: none;
+  }
+}

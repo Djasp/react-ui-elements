@@ -1,0 +1,75 @@
+.vn-contextmenu {
+  position: relative;
+
+  -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+
+  > .icon {
+    cursor: pointer;
+    margin: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    -webkit-transition: opacity .1s ease,background .25s ease;
+    transition: opacity .1s ease,background .25s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.cogwheel {
+      > svg {
+        width: 50%;
+      }
+    }
+
+    &:hover {
+      background: rgba($black,.05);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 28px;
+    right: 15px;
+    background: $white;
+    width: 200px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    max-height: 160px;
+    overflow: hidden;
+
+    ul {
+      width: 100%;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        padding: 10px 12px;
+        line-height: 14px;
+
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          cursor: pointer;
+          background: rgba($black, 0.05);
+        }
+
+        > .menu-icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 17px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

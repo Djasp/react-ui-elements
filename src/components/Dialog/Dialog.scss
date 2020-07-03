@@ -1,0 +1,340 @@
+.vn-dialog {
+  &.ui {
+    &.modal {
+      display: none;
+      position: fixed;
+      z-index: 1001;
+      left: 50%;
+      text-align: left;
+      background: $white;
+      color: $primary-text-color;
+      border: none;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+      //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+      transform-origin: 50% 25%;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 3px;
+      //Instead of the line below you could use @include user-select($select)
+      user-select: text;
+      will-change: top, left, margin, transform, opacity;
+      font-size: 1rem;
+      > {
+        :last-child {
+          //Instead of the line below you could use @include border-bottom-left-radius($radius)
+          border-bottom-left-radius: 0.28571429rem;
+          //Instead of the line below you could use @include border-bottom-right-radius($radius)
+          border-bottom-right-radius: 0.28571429rem;
+        }
+        .close {
+          display: flex;
+          cursor: pointer;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 1;
+          font-size: 1.25em;
+          color: $primary-text-color;
+          width: 56px;
+          height: 56px;
+          margin: 0;
+          &:hover {
+            opacity: 1;
+          }
+          &:before {
+            content: '\D7';
+            font-size: 30px;
+            line-height: 49px;
+          }
+        }
+        :first-child:not(.icon) {
+          //Instead of the line below you could use @include border-top-left-radius($radius)
+          border-top-left-radius: 0.28571429rem;
+          //Instead of the line below you could use @include border-top-right-radius($radius)
+          border-top-right-radius: 0.28571429rem;
+        }
+        .icon:first-child + * {
+          //Instead of the line below you could use @include border-top-left-radius($radius)
+          border-top-left-radius: 0.28571429rem;
+          //Instead of the line below you could use @include border-top-right-radius($radius)
+          border-top-right-radius: 0.28571429rem;
+        }
+        .image.content {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+      > [class*="top aligned"] {
+        align-self: top;
+      }
+      > [class*="middle aligned"] {
+        align-self: middle;
+      }
+      > [class*="stretched"] {
+        align-self: stretch;
+      }
+      > div > {
+        .header {
+          display: block;
+          background: $white;
+          margin: 0;
+          margin-bottom: 13px;
+          padding: 0;
+          //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+          box-shadow: none;
+          &:not(.ui) {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.28571429em;
+          }
+        }
+        .content {
+          display: block;
+          width: 100%;
+          font-size: 14px;
+          line-height: 1.4;
+          padding: 0;
+          background: $white;
+          margin-bottom: 10px;
+          > {
+            .image {
+              display: block;
+              flex: 0 1 auto;
+              width: '';
+              align-self: top;
+              > i.icon {
+                margin: 0;
+                opacity: 1;
+                width: auto;
+                line-height: 1;
+                font-size: 8rem;
+              }
+            }
+            .description {
+              display: block;
+              flex: 1 0 auto;
+              min-width: 0;
+              align-self: top;
+            }
+          }
+        }
+        .actions {
+          padding: 0;
+          margin-top: 20px;
+          text-align: right;
+        }
+      }
+      .actions > .button {
+        margin: 0;
+        margin-left: 10px;
+      }
+
+      > div {
+        &.alert {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 120px;
+          flex: inherit;
+          background: $grey1;
+          padding: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        display: inline-block;
+        flex: 1;
+        padding: 30px 20px 20px 20px;
+      }
+    }
+    &.fullscreen {
+      &.modal {
+        width: 95% !important;
+        left: 2.5% !important;
+        margin: 1em auto;
+      }
+      &.scrolling.modal {
+        left: 0 !important;
+      }
+    }
+    &.inverted.dimmer > {
+      .ui {
+        &.modal {
+          //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+          box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+    &.basic.modal {
+      background-color: transparent;
+      border: none;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 0;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: none !important;
+      color: $white;
+      > div > {
+        .header {
+          background-color: transparent;
+          color: $white;
+        }
+        .content {
+          background-color: transparent;
+        }
+        .actions {
+          background-color: transparent;
+        }
+      }
+    }
+    &.active.modal {
+      display: flex !important;
+      justify-content: space-around;
+      align-items: stretch;
+    }
+  }
+  &.scrolling {
+    &.dimmable {
+      &.dimmed {
+        overflow: hidden;
+        > .dimmer {
+          overflow: auto;
+        }
+      }
+      > .dimmer {
+        position: fixed;
+      }
+    }
+    &.undetached.dimmable {
+      &.dimmed {
+        overflow: auto;
+        > .dimmer {
+          overflow: hidden;
+        }
+      }
+      .ui.scrolling.modal {
+        position: absolute;
+        left: 50%;
+        margin-top: 3.5rem !important;
+      }
+    }
+  }
+  &.modals.dimmer .ui.scrolling.modal {
+    position: static !important;
+    margin: 3.5rem auto !important;
+  }
+  &.undetached.dimmable.dimmed > .pusher {
+    z-index: auto;
+  }
+}
+@media only screen and(max-width: 767px) {
+  &.ui {
+    &.modal {
+      width: 95%;
+      margin: 0 0 0 -47.5%;
+      > div > {
+        .content {
+          display: block;
+          > .image > i.icon {
+            font-size: 5rem;
+            text-align: center;
+          }
+        }
+      }
+      .image.content {
+        flex-direction: column;
+      }
+      .content > {
+        .image {
+          display: block;
+          max-width: 100%;
+          margin: 0 auto !important;
+          text-align: center;
+        }
+        .description {
+          display: block;
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 1rem 0 !important;
+          //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+@media only screen and(min-width: 768px) {
+  &.ui {
+    &.modal {
+      width: 88%;
+      margin: 0 0 0 -44%;
+    }
+    &.small.modal {
+      width: 70.4%;
+      margin: 0 0 0 -35.2%;
+    }
+    &.large.modal {
+      width: 88%;
+      margin: 0 0 0 -44%;
+    }
+  }
+}
+@media only screen and(min-width: 992px) {
+  &.ui {
+    &.modal {
+      width: 600px;
+      margin: 0 0 0 -300px;
+    }
+    &.small.modal {
+      width: 600px;
+      margin: 0 0 0 -300px;
+    }
+    &.large.modal {
+      width: 600px;
+      margin: 0 0 0 -300px;
+    }
+  }
+}
+@media only screen and(min-width: 1200px) {
+  &.ui {
+    &.modal {
+      width: 600px;
+      margin: 0 0 0 -300px;
+    }
+    &.small.modal {
+      width: 600px;
+      margin: 0 0 0 -300px;
+    }
+    &.large.modal {
+      width: 600px;
+      margin: 0 0 0 -300px;
+    }
+  }
+}
+@media only screen and(min-width: 1920px) {
+  &.ui {
+    &.modal {
+      width: 600px;
+      margin: 0 0 0 -300px;
+    }
+    &.small.modal {
+      width: 600px;
+      margin: 0 0 0 -300px;
+    }
+    &.large.modal {
+      width: 600px;
+      margin: 0 0 0 -300px;
+    }
+  }
+}
+@media only screen and(max-width: 991px) {
+  & {
+    &.ui {
+      &.basic.modal > .close {
+        color: $white;
+      }
+    }
+    &.modals.dimmer .ui.scrolling.modal {
+      margin-top: 1rem !important;
+      margin-bottom: 1rem !important;
+    }
+  }
+}

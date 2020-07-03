@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UI Elements\n"
+"POT-Creation-Date: 2017-09-20 09:36+0200\n"
+"PO-Revision-Date: 2017-09-20 09:36+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: ../src\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: t\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: components/Dialog/Dialog.js:55
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: components/Dialog/Dialog.js:55
+msgid "Close"
+msgstr "Schließen"
+
+#: components/Select/Select.js:69
+msgid "No results found."
+msgstr "Keine Ergebnisse gefuden."
+
+#~ msgid "Forgot password"
+#~ msgstr "Wachtwoord vergeten"
+
+#~ msgid "If an account is connected with the given email address, you will receive an email with a link to reset your password"
+#~ msgstr "Als er een account verbonden is met het opgegeven e-mailadres, zult u een email ontvangen met daarin de link om uw wachtwoord te resetten"
+
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgid "Resend password"
+#~ msgstr "Wachtwoord herstellen"
+
+#~ msgid "Login"
+#~ msgstr "Inloggen"
+
+#~ msgid "Username"
+#~ msgstr "Gebruikersnaam"
+
+#~ msgid "Password"
+#~ msgstr "Wachtwoord"

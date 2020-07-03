@@ -1,0 +1,78 @@
+{
+  "plugins": [
+    "react"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use,
+                                         // default to "createReactClass"
+      "pragma": "React",  // Pragma to use, default to "React"
+      "version": "detect", // React version. "detect" automatically picks the version you have installed.
+                           // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+      "flowVersion": "0.53" // Flow version
+    },
+    "propWrapperFunctions": [
+        // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
+        "forbidExtraProps",
+        {"property": "freeze", "object": "Object"},
+        {"property": "myFavoriteWrapper"}
+    ],
+    "linkComponents": [
+      // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
+      "Hyperlink",
+      {"name": "Link", "linkAttribute": "to"}
+    ]
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "node": true
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "comma-dangle": 1,
+    "quotes": [ 1, "single" ],
+    "no-undef": 1,
+    "global-strict": 0,
+    "no-extra-semi": 1,
+    "no-underscore-dangle": 0,
+    "no-console": 1,
+    "no-unused-vars": [1, { "ignoreRestSiblings": true }],
+    "no-trailing-spaces": [1, { "skipBlankLines": true }],
+    "no-unreachable": 1,
+    "no-alert": 0,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "react/prop-types": [1, { "ignore": [ "t" ] }],
+    "react/display-name": 1,
+    "nonblock-statement-body-position": ["error", "beside"],
+    "curly": "error"
+  },
+  "globals": {
+    "expect": true,
+    "mount": true,
+    "assert": true,
+    "require": true,
+    "shallow": true,
+    "render": true,
+    "shallowWithIntl": true,
+    "mountWithIntl": true,
+    "storiesOf": true,
+    "specs": true
+  }
+}

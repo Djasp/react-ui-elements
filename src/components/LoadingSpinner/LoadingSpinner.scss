@@ -1,0 +1,44 @@
+.vn-loading-spinner {
+  padding: 20px 20px 15px 20px;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 5px;
+
+  svg {
+    -webkit-animation: rotation 1s infinite linear;
+
+    .spinner {
+      fill: $primary;
+    }
+  }
+
+  &.small {
+    padding: 10px 10px 5px 10px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      .spinner {
+        stroke: $primary;
+      }
+    }
+  }
+
+  &.light-background {
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  &.dark-background {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}

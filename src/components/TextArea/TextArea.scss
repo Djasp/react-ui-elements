@@ -1,0 +1,221 @@
+.vn-form.ui.form .vn-textarea,
+.vn-textarea {
+  all: unset;
+  position: relative;
+  width: 100%;
+  background: $white;
+  border-radius: 3px;
+  display: inline-flex;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 25px);
+    height: 20px;
+    margin: 1px;
+    background-color: $white;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 3px;
+  }
+
+  > label {
+    position: absolute;
+    top: 13px;
+    left: 12px;
+
+    z-index: 2;
+    opacity: 0.8;
+
+    background: transparent;
+    display: block;
+    box-sizing: border-box;
+    height: 19px;
+    padding: 0;
+
+    font-size: 1em;
+    font-weight: 400;
+    color: desaturate(lighten($primary-text-color, 17), 12);
+    -webkit-text-fill-color: desaturate(lighten($primary-text-color, 17), 12);
+
+    pointer-events: none;
+
+    transform-origin: left top;
+    transition: 200ms ease all;
+
+    &::selection {
+      background: rgba($primary-text-color, 0.3);
+    }
+    &::-moz-selection {
+      background: rgba($primary-text-color, 0.3);
+    }
+  }
+
+  textarea {
+    all: unset;
+
+    font-size: 14px;
+    color: $primary-text-color;
+    -webkit-text-fill-color: $primary-text-color;
+    font-weight: 400;
+    white-space: pre-wrap;
+
+    width: 100%;
+    min-height: 45px !important;
+
+    padding: 18px 22px 4px 11px;
+
+    box-sizing: border-box;
+
+    border-radius: 3px;
+    border: 1px solid $grey5;
+
+    background: $white;
+
+    &::placeholder {
+      color: $primary-text-color;
+      -webkit-text-fill-color: $primary-text-color;
+      opacity: 0.3;
+      font-weight: 400;
+    }
+    &::-moz-placeholder {
+      color: $primary-text-color;
+      -webkit-text-fill-color: $primary-text-color;
+      opacity: 0.3;
+      font-weight: 400;
+    }
+    &:-ms-input-placeholder {
+      color: $primary-text-color !important;
+      -webkit-text-fill-color: $primary-text-color !important;
+      opacity: 0.3 !important;
+      font-weight: 400 !important;
+    }
+    &:-ms-input-placeholder {
+      color: $primary-text-color;
+      -webkit-text-fill-color: $primary-text-color;
+      opacity: 0.3;
+      font-weight: 400;
+    }
+  }
+
+  /*
+    Floated label state
+   */
+  &.floating-label {
+    label {
+      transform: translateY(-7px) scale(0.786, 0.786);
+    }
+  }
+
+  /*
+    Focus state
+   */
+  &.focus {
+    &:before {
+      margin: 2px;
+      width: calc(100% - 27px);
+    }
+
+    textarea {
+      padding: 17px 10px 4px 10px;
+      border: 2px solid $greeny-blue;
+    }
+  }
+
+  /*
+    Disabled state
+   */
+  &.disabled {
+    pointer-events: none;
+    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+
+    > label {
+      opacity: 0.2;
+
+      color: $black;
+      -webkit-text-fill-color: $black;
+    }
+
+    > textarea {
+      opacity: 0.2;
+
+      color: $black;
+      -webkit-text-fill-color: $black;
+    }
+  }
+
+  /*
+    Error state
+   */
+  &.error {
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 4px);
+      height: 20px;
+      margin: 2px;
+      background-color: #ffffff;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 4px);
+      height: 20px;
+      margin: 2px;
+      z-index: 2;
+      pointer-events: none;
+      background-color: rgba(241, 80, 80, 0.1);
+    }
+
+    > label {
+      color: $error;
+      -webkit-text-fill-color: $error;
+
+      &::selection {
+        background: $error;
+
+        color: $white;
+        -webkit-text-fill-color: $white;
+      }
+      &::-moz-selection {
+        background: $error;
+
+        color: $white;
+        -webkit-text-fill-color: $white;
+      }
+    }
+
+    textarea {
+      color: $error;
+      -webkit-text-fill-color: $error;
+
+      padding: 18px 9px 3px 9px;
+      border: solid 2px $error;
+      background: rgba($error, 0.1);
+
+      &::selection {
+        background: $error;
+
+        color: $white;
+        -webkit-text-fill-color: $white;
+      }
+      &::-moz-selection {
+        background: $error;
+
+        color: $white;
+        -webkit-text-fill-color: $white;
+      }
+    }
+  }
+
+}

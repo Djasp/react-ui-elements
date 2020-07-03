@@ -1,0 +1,146 @@
+.vn-inputaccordion {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  > section {
+    > .title {
+      position: relative;
+      display: block;
+      background-color: $white;
+      border: 1px solid $grey5;
+      margin-bottom: 0;
+      border-top: none;
+      box-shadow: 0 2px 2px 0 rgba($black, 0.05);
+      cursor: pointer;
+
+      .vn-checkbox {
+        display: block;
+
+        > label {
+          padding: 18px 17px 17px 40px;
+          display: block;
+
+          &:before {
+            top: 18px;
+            left: 13px;
+          }
+
+          &:after {
+            top: 20px;
+            left: 19px;
+          }
+        }
+
+        &.radio {
+          > label {
+            &:after {
+              top: 23px;
+              left: 18px;
+            }
+          }
+        }
+      }
+    }
+
+    > .content {
+      background-color: rgba($black, 0.03);
+      border: 1px solid rgba($grey5, 0.5);
+      padding: 19px 11px;
+      border-bottom: 1px solid $grey5;
+      display: none;
+    }
+
+    &:first-child {
+      > .title {
+        border-top: 1px solid $grey5;
+        border-radius: 3px 3px 0 0;
+      }
+    }
+
+    &:last-child {
+      > .title {
+        border-radius: 0 0 3px 3px;
+      }
+
+      > .content {
+        border-bottom: 1px solid rgba($grey5, 0.5);
+        border-radius: 0 0 3px 3px;
+      }
+    }
+
+    &.active {
+      > .content {
+        display: block;
+      }
+
+      &:last-child {
+        > .title {
+          border-radius: 0;
+        }
+      }
+    }
+
+    &.expandable {
+      > .title {
+        > .indication {
+          position: absolute;
+          right: 18px;
+          top: -9px;
+          transition: transform 150ms ease;
+          pointer-events: none;
+
+          .chevron {
+            display: block;
+            user-select: none;
+            height: 24px;
+            width: 24px;
+
+            &.up {
+              opacity: 0;
+              transition: opacity 150ms ease;
+              transform: rotate(180deg);
+            }
+
+            &.down {
+              opacity: 1;
+              transition: opacity 150ms ease;
+            }
+          }
+        }
+      }
+
+      &.active {
+        > .title {
+          > .indication {
+            transform: translateY(24px);
+
+            .chevron {
+              &.up {
+                opacity: 1;
+              }
+
+              &.down {
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &.disabled {
+        > .title {
+          > .indication {
+            .chevron {
+              > svg {
+                fill: rgba($primary-text-color, 0.3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

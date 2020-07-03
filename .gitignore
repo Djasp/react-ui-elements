@@ -1,0 +1,16 @@
+*.swp
+*~
+*.iml
+*.tgz
+.*.haste_cache.*
+.DS_Store
+.idea
+npm-debug.log
+node_modules
+dist
+src/components/styles/
+/storybook-static
+!/storybook-static/assets
+.nyc_output
+reports
+mochawesome-report/
